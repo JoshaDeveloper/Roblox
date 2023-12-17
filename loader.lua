@@ -78,6 +78,11 @@ if game:GetService("Players").LocalPlayer.PlayerScripts.Client:FindFirstChild("D
     game:GetService("Players").LocalPlayer.PlayerScripts.Client.DeviceChecker:Destroy()
 end
 
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+		vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		wait(1)
+		vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
 
 lp.CharacterAdded:Connect(function(newCharacter)
     character = newCharacter
