@@ -48,7 +48,7 @@ local function IsReadyToParry(loliBall) --// to determine should we parry or not
         currentBalldirectionSpeed = loliBall.Velocity:Dot(direction)
 
         if speed <= 0 then return; end
-        if distance <= 17 then return true; end
+        if distance <= 20 then return true; end
         return ((distance - visualRange) / speed) < getgenv().config["Timing"]
     end;
     return false --// Definitely false
