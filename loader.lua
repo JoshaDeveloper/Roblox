@@ -104,9 +104,9 @@ ballFolder.ChildAdded:Connect(function(v)
             local currentTarget = realBall:GetAttribute("target")
             if currentTarget == myName then
                 local curDistance = (realBall.Position - character.HumanoidRootPart.Position).Magnitude
-                if curDistance <= 25 then
+                if curDistance <= 30 then
                         print("hello ball")
-                        if curDistance < 14 then
+                        if curDistance < 17 then
                             parryButton:Fire()
                         end
                         if curDistance / maxSpeed < 0.22 then
@@ -126,7 +126,7 @@ ballFolder.ChildAdded:Connect(function(v)
                     spamCase = false
                 end
             else
-                if (alive[currentTarget].HumanoidRootPart.Position - character.HumanoidRootPart.Position).Magnitude > 25 then
+                if (alive[currentTarget].HumanoidRootPart.Position - character.HumanoidRootPart.Position).Magnitude > 30 then
                     closeRangecount = 0
                     spamCase = false
                 end
