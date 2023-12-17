@@ -109,7 +109,7 @@ ballFolder.ChildAdded:Connect(function(v)
                         if curDistance < 14 then
                             parryButton:Fire()
                         end
-                        if curDistance / maxSpeed < 0.28 then
+                        if curDistance / maxSpeed < 0.22 then
                             closeRangecount = closeRangecount + 1
                             if closeRangecount >= 3 then
                                 spamCase = true
