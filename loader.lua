@@ -109,7 +109,7 @@ ballFolder.ChildAdded:Connect(function(v)
                         if curDistance < 14 then
                             parryButton:Fire()
                         end
-                        if curDistance / maxSpeed < 0.32 then
+                        if curDistance / maxSpeed < 0.28 then
                             closeRangecount = closeRangecount + 1
                             if closeRangecount >= 3 then
                                 spamCase = true
@@ -138,8 +138,8 @@ end)
 getgenv().HeartbeatConnection = game:GetService("RunService").Heartbeat:Connect(function(v)
     if spamCase then
         if currentBallspeed <= 0 then return; end
+	parry()
         parryButton:Fire()
-        parry()
         vu:CaptureController()
         vu:Button1Down(Vector2.new(1, 1))
         vim:SendMouseButtonEvent(1, 1, 0, true, game, 1)
