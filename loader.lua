@@ -165,7 +165,7 @@ getgenv().HeartbeatConnection = game:GetService("RunService").Heartbeat:Connect(
             end
 
             character.HumanoidRootPart.CFrame = CFrame.new(ball.Position + Vector3.new(
-                14 * math.cos(angle), -1,  14 * math.sin(angle)
+                15 * math.cos(angle), 0,  15 * math.sin(angle)
             ))
         end
         end
