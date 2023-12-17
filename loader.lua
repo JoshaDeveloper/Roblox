@@ -48,7 +48,7 @@ local function IsReadyToParry(loliBall) --// to determine should we parry or not
         currentBalldirectionSpeed = loliBall.Velocity:Dot(direction)
 
         if speed <= 0 then return; end
-        if distance <= 20 then return true; end
+        if distance <= 21 then return true; end
         return ((distance - visualRange) / speed) < getgenv().config["Timing"]
     end;
     return false --// Definitely false
@@ -160,7 +160,7 @@ getgenv().HeartbeatConnection = game:GetService("RunService").Heartbeat:Connect(
             end
 
             character.HumanoidRootPart.CFrame = CFrame.new(ball.Position + Vector3.new(
-                13 * math.cos(angle), 0,  13 * math.sin(angle)
+                14 * math.cos(angle), -1,  14 * math.sin(angle)
             ))
         end
         end
