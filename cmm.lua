@@ -146,7 +146,7 @@ getgenv().jaidenConnection.heartBeat = game:GetService('RunService').Heartbeat:C
         visualPart.Size = Vector3.new(maxVelocity / 6, maxVelocity / 6, maxVelocity / 6)
         visualPart.Position = character.HumanoidRootPart.Position
         if character:FindFirstChild("Highlight") then
-            if (character.HumanoidRootPart.Position - ball.Position).Magnitude <= maxVelocity * 1.25 then
+            if (character.HumanoidRootPart.Position - ball.Position).Magnitude <= maxVelocity * 1.75 then
                 if isParried(ball) < 0.25 then
                     parryButton:Fire()
                 end
