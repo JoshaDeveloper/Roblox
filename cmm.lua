@@ -34,7 +34,7 @@ local function isParried(ball)
         local Speed = ball.Velocity:Dot(Direction)
         if Speed <= 0 then return 9e9 end
         if Distance < 20 then
-            return Distance / maxVelocity
+            return Distance / maxVelocity * 2
         end
         return ((Distance - 30) / Speed)
 end
