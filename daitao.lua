@@ -103,7 +103,7 @@ getgenv().jaidenConnection.ballSpawned = ballFolder.ChildAdded:Connect(function(
             ballTarget = v:GetAttribute('target')
             if ballTarget == lpName then
                 local timeToImpact = isParried(ballFolder:GetChildren()[1])
-                if timeToImpact < 1 then
+                if timeToImpact < 1.3 then
                     print("close detected")
                     if (character.HumanoidRootPart.Position - v.Position).Magnitude <= 22 then
                         is_spam_needed = true
@@ -147,7 +147,7 @@ getgenv().jaidenConnection.heartBeat = game:GetService('RunService').Heartbeat:C
         visualPart.Position = character.HumanoidRootPart.Position
         if character:FindFirstChild("Highlight") then
             if (character.HumanoidRootPart.Position - ball.Position).Magnitude <= maxVelocity * 1.75 then
-                if isParried(ball) < 0.6 then
+                if isParried(ball) < 0.7 then
                     parryButton:Fire()
                 end
             end
