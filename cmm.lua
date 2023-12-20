@@ -19,7 +19,7 @@ local ballFolder = game.Workspace.Balls
 
 -- changing variables
 local ballTarget = ballFolder:GetChildren()[1]:GetAttribute("target") or ""
-local maxVelocity = 0
+local maxVelocity = 1
 local visualSize = 0
 local is_spam_needed = false
 
@@ -34,7 +34,7 @@ local function isParried(ball)
         local Speed = ball.Velocity:Dot(Direction)
         if Speed <= 0 then return 9e9 end
         if Distance < 20 then
-            return 0;
+            return Distance / maxVelocity
         end
         return ((Distance - 30) / Speed)
 end
@@ -155,5 +155,5 @@ getgenv().jaidenConnection.heartBeat = game:GetService('RunService').Heartbeat:C
     end
 end)
 --[[
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/JoshaDeveloper/Roblox/main/urgay.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JoshaDeveloper/Roblox/main/cmm.lua"))()
 ]]
