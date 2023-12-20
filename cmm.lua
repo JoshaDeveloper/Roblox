@@ -36,7 +36,7 @@ local function isParried(ball)
         if Distance < 20 then
             return 0;
         end
-        return ((Distance - 35) / Speed)
+        return ((Distance - 30) / Speed)
 end
 local function parry()
     local stuffs = {}
