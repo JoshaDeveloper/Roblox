@@ -35,7 +35,7 @@ local function isParried(ball)
         local Direction = vectorToMe.Unit
         local Speed = ball.Velocity:Dot(Direction)
         if Speed <= 0 then return 9e9 end
-        if Distance < 18 then
+        if Distance < 20 then
             return 0
         end
         return ((Distance - ball:GetMass()) / Speed)
@@ -148,8 +148,8 @@ getgenv().jaidenConnection.heartBeat = game:GetService('RunService').Heartbeat:C
         visualPart.Size = Vector3.new(maxVelocity / 6, maxVelocity / 6, maxVelocity / 6)
         visualPart.Position = character.HumanoidRootPart.Position
         if character:FindFirstChild("Highlight") then
-            if (character.HumanoidRootPart.Position - ball.Position).Magnitude <= maxVelocity / (4/3) then
-                if isParried(ball) < 0.68 then
+            if (character.HumanoidRootPart.Position - ball.Position).Magnitude <= maxVelocity / 1.5 then
+                if isParried(ball) < 0.6 then
                     parryButton:Fire()
                 end
             end
