@@ -105,7 +105,7 @@ getgenv().jaidenConnection.ballSpawned = ballFolder.ChildAdded:Connect(function(
             ballTarget = v:GetAttribute('target')
             if ballTarget == lpName then
                 local timeToImpact = isParried(ballFolder:GetChildren()[1])
-                if timeToImpact < 1.3 then
+                if timeToImpact < 1.5 then
                     print("close detected")
                     if (character.HumanoidRootPart.Position - v.Position).Magnitude <= 22 then
                         is_spam_needed = true
