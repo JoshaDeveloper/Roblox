@@ -18,7 +18,9 @@ local dead = game.Workspace.Dead
 local ballFolder = game.Workspace.Balls
 
 -- changing variables
-local ballTarget = ballFolder:GetChildren()[1]:GetAttribute("target") or ""
+repeat wait() until ballFolder:GetChildren()[1] ~= nil
+print("workin")
+local ballTarget = ballFolder:GetChildren()[1]:GetAttribute("target")
 local maxVelocity = 1
 local visualSize = 0
 local is_spam_needed = false
