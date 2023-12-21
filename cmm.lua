@@ -38,7 +38,7 @@ local function isParried(ball)
         if Distance < 18 then
             return 0
         end
-        return ((Distance - 9.8) / Speed)
+        return ((Distance - ball:GetMass()) / Speed)
 end
 local function parry()
     local stuffs = {}
